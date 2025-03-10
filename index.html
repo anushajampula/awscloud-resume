@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloud Portfolio</title>
+    <title>Cloud Resume Challenge</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+        scroll-behavior: smooth;
+    }
+    </style>
 </head>
 <body>
-    <header>
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
         <h1>Welcome to My Cloud Portfolio</h1>
         <p>This is my first cloud portfolio project.</p>
-    </header>
-    <section id=""visitor-counter">
-        <h2>Visiter Count: <span id="visitor-count">loading...</span></h2></section>
+    </div>
 
-    <section id="about">
+    <div class="container">
+        <h2>Visitor Count</h2>
+        <p id="visitor-count">Loading...</p>
+    </div>
+
+    <div class="container" id="about-me">
         <h2>About Me</h2>
-        <img src="profile.jpg" alt="Profile Picture" width="150">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
         <p>I am a Cloud Engineer passionate about AWS and web development.</p>
-    </section>
+    </div>
 
-    <section id="projects">
+    <div class="container" id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Cloud Resume Challenge</a></li>
-            <li><a href="#">AWS S3 Static Website</a></li>
-            <li><a href="#">Lambda Function for Automation</a></li>
-        </ul>
-    </section>
+        <a href="#">Cloud Resume Challenge</a>
+        <a href="#">AWS S3 Static Website</a>
+        <a href="#">Lambda Function for Automation</a>
+    </div>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
+    <div class="container" id="contact">
+        <h2>contact</h2>
         <p>Email: jampulaanusha12@gmail.com</p>
-        <p>LinkedIn: <a href="#">www.linkedin.com/in/anusha-jampula-8148b2244</a></p>
-        <p><a href="resume.pdf" download>Download Resume</a></p>
-    </section>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

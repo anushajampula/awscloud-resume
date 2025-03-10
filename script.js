@@ -1,6 +1,6 @@
 const countElement = document.getElementById("visitor-count");
 
-fetch("YOUR_API_GATEWAY_URL_HERE")
+fetch("https://hgrg6yb2r5.execute-api.us-east-1.amazonaws.com/VisitorCounter")
   .then(response => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -9,7 +9,7 @@ fetch("YOUR_API_GATEWAY_URL_HERE")
   })
   .then(data => {
     console.log("API Response:", data);
-    countElement.textContent = data.visitorCount;  // Make sure this key matches your API response
+    countElement.textContent = data;  // Make sure this key matches your API response
   })
   .catch(error => {
     console.error("Error fetching visitor count:", error);
