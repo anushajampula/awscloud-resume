@@ -1,17 +1,11 @@
-const counter = document.getElementById('visitor-count');
-
-async function getVisitorCount() {
+async function fetchVisitorCount() {
     try {
-        const response = await fetch('https://hgrg6yb2r5.execute-api.us-east-1.amazonaws.com/VisitorCounter'); // Replace with your actual API Gateway URL
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        const response = await fetch("https://hgrg6yb2r5.execute-api.us-east-1.amazonaws.com/VisitorCounter");
         const data = await response.json();
-        counter.innerText = data.visitorCount || '0'; // Default to 0 if undefined
+        document.getElementById("visitor-count").innerText = data.visitorCount;
     } catch (error) {
-        console.error('Error fetching visitor count:', error);
-        counter.innerText = 'Error loading visitor count';
+        console.error("Error fetching visitor count:", error);
+        document.getElementById("visitor-count").innerText = "Error loading visitor count";
     }
 }
-
-getVisitorCount();
+fetchVisitorCount();
