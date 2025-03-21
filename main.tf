@@ -11,9 +11,12 @@ provider "aws" {
   region = "us-east-1" # Change this to your preferred AWS region
 }
 
+# S3 Bucket
+
 resource "aws_s3_bucket" "resume" {
   bucket = "anusha-resume-bucket"
 }
+# CloudFront
 
 resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
   comment = "Origin Access Identity for CloudFront"
@@ -67,6 +70,8 @@ resource "aws_cloudfront_distribution" "resume_distribution" {
     ignore_changes = [price_class, default_cache_behavior, origin]
   }
 }
+# IAM Role
+
 resource "aws_iam_role" "lambda_execution_role" {
  name = "VisitorCounter-role-sj5dnid4"
  path = "/service-role/"
@@ -89,6 +94,7 @@ lifecycle{
     }
 )
 }
+# Lambda
 
 resource "aws_lambda_function" "visitor_counter" {
  function_name = "arn:aws:lambda:us-east-1:864899867882:function:VisitorCounter"
@@ -107,6 +113,7 @@ lifecycle {
   }
  }
 }
+# DynamoDB Table
 
 resource "aws_dynamodb_table" "visitor_counter" {
 lifecycle {
@@ -125,6 +132,7 @@ lifecycle {
     Name = "visitorCounterTable"
   }
 }
+# API Gateway
 
 resource "aws_apigatewayv2_api" "visitor_counter_api" {
 lifecycle {
@@ -146,4 +154,3 @@ resource "aws_apigatewayv2_stage" "default_stage" {
   name        = "$default"
   auto_deploy = true
 }
-
