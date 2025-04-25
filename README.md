@@ -1,2 +1,2 @@
-# cloud-portfolio
+# awscloud-resume
 My cloud portfolio resume
