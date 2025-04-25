@@ -1,50 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>  
-    <link rel="icon" type="image/x-icon" href="https://d1qkg92c5f8jnv.cloudfront.net/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloud Resume Challenge</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        html {
-        scroll-behavior: smooth;
-    }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anusha Jampula - Cloud Resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <nav>
-        <a href="#about-me">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Anusha Jampula</h1>
+      <ul class="nav-links">
+        <li><a href="#contact">Contact</a></li>
+        <li class="navbar-btn-2">
+           <a href="https://anushajampula.medium.com/" target="_blank" class="nav-link">Blog</a></li>
+        <li class="navbar-btn-2">
+           <a href="./resume/Anusha_Resume.pdf" target="_blank" class="nav-link">Resume (PDF)</a>
+        </li>
+      </ul>
     </nav>
-    <div class="container">
-        <h1>Welcome to My Cloud Portfolio!</h1>
-        <p>This is my first cloud portfolio project.</p>
-    </div>
+  </header>
 
-    <div class="container">
-        <h2>Visitor Count</h2>
-        <p id="visitor-count">Loading...</p>
-    </div>
+  <!-- Main Content -->
+  <main class="container">
+    
+    <section class="hero">
+      <h2>Hi, I'm <span>Anusha Jampula</span></h2>
+      <p class="viewers-count">and this page has been viewed <span id="visitors">class="viewers-count-tag"</span> times.</p>
+    </section>
 
-    <div class="container" id="about-me">
-        <h2>About Me</h2>
-        <p>I am a Cloud Engineer passionate about AWS and web development.</p>
-    </div>
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>Aspiring Cloud Engineer with a strong interest in AWS and cloud technologies. Committed to building scalable, secure, and efficient cloud solutions. Continuously expanding my knowledge in cloud architecture, automation, and DevOps practices to contribute effectively to real-world projects.</p>
+    </section>
 
-    <div class="container" id="projects">
-        <h2>Projects</h2>
-        <a href="#">Cloud Resume Challenge</a>
-        <a href="#">AWS S3 Static Website</a>
-        <a href="#">Lambda Function for Automation</a>
-    </div>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Cloud:</strong> AWS</li>
+        <li><strong>Programming:</strong> HTML, CSS, JavaScript, Python</li>
+        <li><strong>IaC:</strong> Terraform, GitHub Actions (CI/CD)</li>
+        <li><strong>OS:</strong> Windows, Linux</li>
+      </ul>
+    </section>
 
-    <div class="container" id="contact">
-        <h2>contact</h2>
-        <p>Email: jampulaanusha12@gmail.com</p>
-    </div>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Cloud Resume Challenge</h3>
+        <p><strong>Technologies:</strong> AWS S3, CloudFront, Lambda, API Gateway, IAM, DynamoDB, Route 53</p>
+        <a href="https://anusha-cloud-resume.com" target="_blank">Live Project</a> |
+        <a href="https://github.com/anushajampula/awscloud-resume" target="_blank">Source Code</a>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <ul>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>AWS Cloud Quest: Cloud Practitioner</li> 
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <p><strong>B.Tech - CSE</strong><br>Dr.K.V.Subba Reddy Womens Engineering College<br>2018 - 2022</p>
+    </section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li><a href="mailto:jampulaanusha12@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+      <li><a href="https://linkedin.com/in/anusha-jampula-8148b2244" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/anushajampula" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
