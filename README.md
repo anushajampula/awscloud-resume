@@ -12,7 +12,7 @@ The Cloud Resume Challenge involves creating and hosting a static website on AWS
 
 ## Github Structure
 - `.github/workflows/deploy-lambda.yml`: For GitHub Actions workflow configurations.
-- `Frontend/index.html': It has the frontend website code.
+- `Frontend/index.html`: It has the frontend website code.
 - `Backend/lambda_function.py`: The visitor counter code, which is deployed on a lambda function.
 - `Infrastructure/main.tf`: Backend infrastructure written as Terraform code.
 - `assets/`: Architecture of AWS.
