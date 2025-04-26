@@ -35,4 +35,4 @@ jobs:
 
     - name: Deploy to Lambda
       run: |
-        aws lambda update-function-code --function-name your-lambda-function-name --zip-file fileb://lambda_code.zip
+        aws lambda update-function-code --function-name VisitorCounter --zip-file fileb://lambda_code.zip
