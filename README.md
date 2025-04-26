@@ -1,4 +1,4 @@
-# AWS-CloudResumeChallenge
+# AWS-CloudResume
 
 This project is my implementation of the Cloud Resume Challenge, a hands-on project that showcases cloud skills using AWS services, Infrastructure as code, CI/CD pipelines, and frontend/backend integration.
 
@@ -13,9 +13,9 @@ The Cloud Resume Challenge involves creating and hosting a static website on AWS
 # Github Structure
 * github/workflows/deploy-lambda.yml/: For GitHub Actions workflow for Lambda deployment.
 * Backend/lambda_function.py/: The visitor counter code, which is deployed on a lambda function.
-* Frontend/: index.html - It has the frontend website code.
-             style.css - For Styling, html.
-             script.js - For calling API to get the visitor count.
+* Frontend/: *index.html - It has the frontend website code.
+             *style.css - For Styling, html.
+             *script.js - For calling API to get the visitor count.
 * Infrastructure/main.tf/: Backend infrastructure written as Terraform code.
 
 # AWS Services Used
