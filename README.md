@@ -1,4 +1,4 @@
-# AWSCloud-Resume
+# AWS-CloudResume
 # Cloud Resume Challenge
 
 This project is my implementation of the Cloud Resume Challenge, a hands-on project that showcases cloud skills using AWS services, Infrastructure as code, CI/CD pipelines, and frontend/backend integration.
