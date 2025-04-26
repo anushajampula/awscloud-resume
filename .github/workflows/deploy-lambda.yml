@@ -13,33 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.8'
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+        
+    - name: Zip Lambda function
+      run: |
+        cd Backend
+        zip -r ../lambda_code.zip lambda_function.py
 
-      - name: Install dependencies
-        run: |
-          cd Backend
-          pip install -r requirements.txt -t .
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
 
-      - name: Zip Lambda function
-        run: |
-          cd Backend
-          zip -r ../lambda_function.zip .
-
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
-
-      - name: Deploy to Lambda
-        run: |
-          aws lambda update-function-code \
-            --function-name visitor_counter \
-            --zip-file fileb://lambda_function.zip
+    - name: Deploy to Lambda
+      run: |
+        aws lambda update-function-code --function-name VisitorCounter --zip-file fileb://lambda_code.zip
