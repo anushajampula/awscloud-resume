@@ -1,4 +1,4 @@
-# AWS-CloudResume
+# AWS-CloudResume                                               
 
 This project is my implementation of the Cloud Resume Challenge, a hands-on project that showcases cloud skills using AWS services, Infrastructure as code, CI/CD pipelines, and frontend/backend integration.
 
@@ -36,3 +36,5 @@ The Cloud Resume Challenge involves creating and hosting a static website on AWS
 - [Email](jampulaanusha12@gmail.com)
 - [LinkedIn](https://linkedin.com/in/anusha-jampula-8148b2244)
 - [GitHub](https://github.com/anushajampula)
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=your_github_username.your_repo_name)
