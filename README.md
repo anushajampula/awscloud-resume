@@ -36,5 +36,3 @@ The Cloud Resume Challenge involves creating and hosting a static website on AWS
 - [Email](jampulaanusha12@gmail.com)
 - [LinkedIn](https://linkedin.com/in/anusha-jampula-8148b2244)
 - [GitHub](https://github.com/anushajampula)
-
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=anushajampula.awscloud-resume)
